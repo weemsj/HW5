@@ -17,7 +17,7 @@ app.get('/',function(req,res){
     res.render('get-checker', context);
 });
 
-app.post('/',function(req,res){
+app.get('/',function(req,res){
     let queryP = [];
     for (let param in req.query){
         queryP.push({'name':param,'value':req.query[param]})
