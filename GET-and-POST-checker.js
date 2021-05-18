@@ -8,9 +8,9 @@ app.set('view engine', 'handlebars');
 app.set('port', 8294);
 
 app.get('/',function(req,res){
-    let query = [];
+    let queryP = [];
     for (let param in req.query){
-        query.push({'name':param,'value':req.query[param]})
+        queryP.push({'name':param,'value':req.query[param]})
     }
     let context = {};
     context.infoList = query;
@@ -18,9 +18,9 @@ app.get('/',function(req,res){
 });
 
 app.post('/', function(req,res){
-    let query = [];
+    let queryP = [];
     for (let param in req.body){
-        query.push({'name':param,'value':req.body[param]})
+        queryP.push({'name':param,'value':req.body[param]})
     }
     let context = {};
     context.infoList = query;
