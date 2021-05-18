@@ -13,7 +13,7 @@ app.get('/',function(req,res){
         queryP.push({'name':param,'value':req.query[param]})
     }
     let context = {};
-    context.infoList = query;
+    context.infoList = queryP;
     res.render('get-checker', context);
 });
 
@@ -23,7 +23,7 @@ app.post('/', function(req,res){
         queryP.push({'name':param,'value':req.body[param]})
     }
     let context = {};
-    context.infoList = query;
+    context.infoList = queryP;
     res.render('post-check', context);
 });
 
