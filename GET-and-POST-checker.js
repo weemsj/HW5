@@ -2,6 +2,10 @@ const express = require('express');
 
 const app = express();
 const handlebars = require('express-handlebars').create({defaultLayout:'main'});
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -17,7 +21,7 @@ app.get('/',function(req,res){
     res.render('get-checker', context);
 });
 
-/*app.post('/',function(req,res){
+app.post('/',function(req,res){
     let queryP = [];
     for (let param in req.query){
         queryP.push({'name':param,'value':req.query[param]})
@@ -27,7 +31,7 @@ app.get('/',function(req,res){
     let context = {};
     context.infoList = queryP;
     res.render('post-check', context);
-});*/
+});
 
 app.post('/', function(req,res){
     let queryP = [];
