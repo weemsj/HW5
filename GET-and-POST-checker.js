@@ -17,7 +17,7 @@ app.get('/',function(req,res){
     res.render('get-checker', context);
 });
 
-app.get('/',function(req,res){
+/*app.post('/',function(req,res){
     let queryP = [];
     for (let param in req.query){
         queryP.push({'name':param,'value':req.query[param]})
@@ -27,7 +27,7 @@ app.get('/',function(req,res){
     let context = {};
     context.infoList = queryP;
     res.render('post-check', context);
-});
+});*/
 
 app.post('/', function(req,res){
     let queryP = [];
