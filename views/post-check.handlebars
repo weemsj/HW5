@@ -7,12 +7,12 @@
         </tr>
     </thead>
     <tbody>
-    <tr>
-        {{#each infoList}}
+    {{#each infoList}}
+        <tr>
             <td>{{this.name}}</td>
             <td>{{this.value}}</td>
-        {{/each}}
-    </tr>
+        </tr>
+    {{/each}}
     </tbody>
 </table>
 <br />
@@ -25,11 +25,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
         {{#each infoList}}
-            <td>{{this.name}}</td>
-            <td>{{this.value}}</td>
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.value}}</td>
+            </tr>
         {{/each}}
-    </tr>
     </tbody>
 </table>
