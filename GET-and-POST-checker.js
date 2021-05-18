@@ -23,7 +23,7 @@ app.post('/',function(req,res){
         queryP.push({'name':param,'value':req.query[param]})
     }
     console.log(queryP);
-    console.log(req.body);
+    console.log(req.query);
     let context = {};
     context.infoList = queryP;
     res.render('post-check', context);
