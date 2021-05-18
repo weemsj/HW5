@@ -24,7 +24,7 @@ app.get('/',function(req,res){
     }
     let context = {};
     context.infoList = queryP;
-    res.render('post-checker', context);
+    res.render('post-check', context);
 });
 
 app.post('/', function(req,res){
