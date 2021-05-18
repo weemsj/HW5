@@ -32,7 +32,7 @@ app.get('/',function(req,res){
 app.post('/', function(req,res){
     let queryP = [];
     for (let param in req.body){
-        queryP.push({'name':param,'value':req.body[param]})
+        queryP.push({'prop':param,'val':req.body[param]})
     }
     console.log(queryP);
     console.log(req.body);
